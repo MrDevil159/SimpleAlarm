@@ -245,6 +245,7 @@
             timeValue.replace(":", "")
           );
           localStorage.setItem("timeArray", JSON.stringify(loadArray));
+          console.log(timeArray, loadArray);
           error.innerHTML = "";
           timeInput.value = "";
           tbody.innerHTML = "";
@@ -288,14 +289,17 @@
           var timeDiff = timeInMinutes - currentTimeInMinutes;
 
           if (closestTimeDiff < 0 && timeDiff >= 0) {
+            console.log("time upp", time);
             return time;
           } else if (
             closestTimeDiff >= 0 &&
             timeDiff >= 0 &&
             timeDiff < closestTimeDiff
           ) {
+            console.log('time', time);
             return time;
           } else {
+            console.log('closest', closest);
             return closest;
           }
         });
