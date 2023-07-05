@@ -95,6 +95,9 @@
             >
               Stop Alarm
             </button>
+            <button type="button" id="Initiate" class="btn btn-success">
+              Initiate
+            </button>
           </form>
         </div>
 
@@ -117,6 +120,10 @@
       var timeElement = document.getElementById("timedisplay");
       var toggleSwitch = document.getElementById("toggSwitch");
       var stopButton = document.getElementById("stop");
+      const Initiate = document.getElementById("Initiate");
+      Initiate.addEventListener("click", () => {
+        console.log("Clicked Initiate");
+      });
       const months = [
         "January",
         "February",
@@ -296,10 +303,10 @@
             timeDiff >= 0 &&
             timeDiff < closestTimeDiff
           ) {
-            console.log('time', time);
+            console.log("time", time);
             return time;
           } else {
-            console.log('closest', closest);
+            console.log("closest", closest);
             return closest;
           }
         });
