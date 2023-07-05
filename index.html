@@ -10,7 +10,10 @@
 
 <script>
 const d = new Date();
-let text = d.toLocaleString();
+let text = d.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
 document.getElementById("demo").innerHTML = text;
 </script>
 
